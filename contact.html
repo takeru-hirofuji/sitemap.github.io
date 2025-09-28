@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>お問い合わせ - 【外国人人材紹介】</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="contact-style.css"> </head>
+<body>
+    <header class="header">
+        <h1>[会社ロゴ]</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">トップ</a></li>
+                <li><a href="service.html">サービス</a></li>
+                <li><a href="#">採用までの流れ</a></li>
+                <li><a href="#">私たちについて</a></li>
+                <li class="current"><a href="#">お問い合わせ</a></li>
+            </ul>
+        </nav>
+        <a href="#" class="cta-button">無料相談・お問い合わせ</a>
+    </header>
+
+    <main class="main-content">
+        <section class="page-header-contact">
+            <h2>お問い合わせ・無料相談</h2>
+            <p>下記のフォームに必要事項をご記入の上、送信してください。</p>
+            <p class="required-note">（<span class="required-mark">必須</span>）は必須項目です。</p>
+        </section>
+
+        <section class="form-section">
+            <form action="#" method="POST" class="contact-form">
+                
+                <div class="form-group">
+                    <label for="company-name">会社名</label>
+                    <input type="text" id="company-name" name="company_name" placeholder="株式会社〇〇" required>
+                    <span class="required-mark">必須</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="name">ご担当者名</label>
+                    <input type="text" id="name" name="name" placeholder="山田 太郎" required>
+                    <span class="required-mark">必須</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">メールアドレス</label>
+                    <input type="email" id="email" name="email" placeholder="example@company.com" required>
+                    <span class="required-mark">必須</span>
+                </div>
+
+                <div class="form-group">
+                    <label for="tel">電話番号</label>
+                    <input type="tel" id="tel" name="tel" placeholder="090-XXXX-XXXX（ハイフン可）">
+                    <span class="optional-mark">任意</span>
+                </div>
+                
+                <div class="form-group">
+                    <label for="inquiry-type">お問い合わせ種別</label>
+                    <select id="inquiry-type" name="inquiry_type" required>
+                        <option value="">選択してください</option>
+                        <option value="jinzaishoukai">外国人人材の紹介について</option>
+                        <option value="visa">ビザ・法務手続きについて</option>
+                        <option value="other">その他</option>
+                    </select>
+                    <span class="required-mark">必須</span>
+                </div>
+
+                <div class="form-group full-width">
+                    <label for="details">お問い合わせ内容</label>
+                    <textarea id="details" name="details" rows="8" placeholder="具体的なご相談内容をご記入ください。" required></textarea>
+                    <span class="required-mark">必須</span>
+                </div>
+
+                <div class="consent-group full-width">
+                    <p>当社の<a href="#" target="_blank">個人情報保護方針</a>をご確認の上、同意いただける場合はチェックを入れてください。</p>
+                    <input type="checkbox" id="consent" name="consent" required>
+                    <label for="consent">上記方針に同意します</label>
+                </div>
+
+                <div class="submit-group full-width">
+                    <button type="submit" class="submit-button large-cta">内容を確認する</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 20XX [会社名]. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
+
+<style>
+.page-header-contact {
+    background-color: #e9ecef;
+    padding: 40px 5%;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.page-header-contact h2 {
+    font-size: 2.5em;
+    color: #007bff;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+.required-note {
+    font-size: 0.9em;
+    color: #dc3545; /* 赤色で注意喚起 */
+    margin-top: 20px;
+}
+
+/* フォームセクション */
+.form-section {
+    max-width: 700px; /* フォームの最大幅を設定 */
+    margin: 0 auto 80px auto;
+    padding: 30px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 15px rgba(0,0,0,0.05);
+}
+
+.contact-form {
+    display: flex;
+    flex-wrap: wrap; /* 要素を折り返して2列にする */
+    justify-content: space-between;
+}
+
+/* フォームグループ（ラベルと入力欄のセット） */
+.form-group {
+    width: calc(50% - 10px); /* 基本的に2列レイアウト */
+    margin-bottom: 25px;
+    position: relative;
+}
+
+.form-group.full-width {
+    width: 100%; /* テキストエリアや同意チェック用 */
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+    color: #333;
+}
+
+/* 入力フィールドの共通スタイル */
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* paddingとborderを幅に含める */
+    font-size: 1em;
+}
+.form-group textarea {
+    resize: vertical; /* 縦方向のみリサイズ可能 */
+}
+
+/* 必須・任意のマーク */
+.required-mark, .optional-mark {
+    display: inline-block;
+    font-size: 0.7em;
+    padding: 3px 6px;
+    border-radius: 3px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.required-mark {
+    background-color: #dc3545; /* 赤 */
+    color: white;
+}
+.optional-mark {
+    background-color: #6c757d; /* グレー */
+    color: white;
+}
+
+/* 同意チェックボックス */
+.consent-group {
+    margin-top: 20px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    text-align: center;
+}
+.consent-group p {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+}
+.consent-group a {
+    color: #007bff;
+    text-decoration: underline;
+}
+
+/* 送信ボタンのグループ */
+.submit-group {
+    text-align: center;
+    margin-top: 30px;
+}
+.submit-button {
+    /* トップページのlarge-ctaスタイルを流用 */
+    background-color: #ffc107; 
+    color: #333;
+    padding: 18px 50px;
+    font-size: 1.3em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.submit-button:hover {
+    background-color: #ffda6a;
+}
+</style>

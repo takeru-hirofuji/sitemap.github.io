@@ -1,0 +1,154 @@
+/* 基本リセット */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f4f4f4; /* ページ背景 */
+  color: #333;
+}
+
+/* ヘッダー */
+.header {
+  background-color: #333;
+  color: white;
+  padding: 15px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header h1 { margin: 0; font-size: 1.5em; }
+.header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+.header nav li { margin-left: 20px; }
+.header nav a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border: 1px solid transparent;
+}
+.header nav li.current a { border-color: white; } /* 現在地を強調 */
+
+/* メインコンテンツ */
+.main-content {
+  width: 90%;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: white; /* コンテンツ背景 */
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h2, h3 {
+  border-left: 5px solid #007bff; /* セクションタイトルの装飾 */
+  padding-left: 10px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* 代表メッセージセクション */
+.message-section .message-box {
+  padding: 20px;
+  border: 1px dashed #ccc;
+  text-align: center;
+}
+.message-box p {
+  margin-bottom: 15px;
+}
+.ceo-name {
+  font-weight: bold;
+  margin-top: 15px;
+  display: block;
+}
+
+/* 会社概要（表組み） */
+.profile-section table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.profile-section th, .profile-section td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+.profile-section th {
+  background-color: #eee;
+  width: 30%;
+  font-weight: normal;
+}
+
+/* 沿革（タイムライン）の簡単な表現 */
+.timeline {
+  list-style: none;
+  padding: 0;
+  border-left: 2px solid #007bff;
+  margin-left: 10px;
+}
+.timeline li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+.timeline .year {
+  font-weight: bold;
+  display: block;
+}
+
+/* アクセスマップのプレースホルダー */
+.map-placeholder {
+  width: 100%;
+  height: 300px;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* CTAボタン */
+.cta-section {
+  text-align: center;
+  margin-top: 40px;
+  padding: 20px 0;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin: 0 10px;
+  font-weight: bold;
+}
+.primary {
+  background-color: #007bff;
+  color: white;
+}
+.secondary {
+  background-color: #6c757d;
+  color: white;
+}
+
+/* フッター */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+}
+.footer ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 5px;
+}
+.footer li {
+  display: inline;
+  margin: 0 10px;
+}
+.footer a {
+  color: white;
+  text-decoration: none;
+}
